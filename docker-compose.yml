@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3333:3333"
+      - "3000:3000"
+      - "24678:24678"
+    working_dir: "/src/nuxt-app"
+    volumes: 
+      - "./src:/src"
+      - node_modules_volume:/src/node_modules
+    tty: true
+    environment:
+      - HOST=0.0.0.0
+      - port=80
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "yarn && yarn dev -o"
+volumes:
+  node_modules_volume:

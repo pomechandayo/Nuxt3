@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build --port=3333",
+    "dev": "nuxt dev --port=3333",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0",
+    "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "@vee-validate/rules": "^4.7.3",
+    "amazon-chime-sdk-js": "^3.9.0",
+    "chart.js": "^4.0.1",
+    "install": "^0.13.0",
+    "mdi": "^2.2.43",
+    "vee-validate": "^4.7.3",
+    "vue-chartjs": "^5.0.1",
+    "vuetify": "^3.0.2"
+  }
+}
