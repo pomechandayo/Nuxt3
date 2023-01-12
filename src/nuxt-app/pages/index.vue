@@ -9,6 +9,7 @@
 
 <script setup>
 import { ref } from 'vue'
+definePageMeta({ layout: 'example-app'})
   const name = ref('太郎')
   const num1 = ref(1)
   const num2 = ref(1)

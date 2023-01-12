@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+  onMounted(() => {
+    console.log('mounted!')
+  })
   const name = ref('太郎') // data
   const num1 = ref(1)
   const num2 = ref(1)
