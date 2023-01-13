@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
-definePageMeta({ layout: false})
-definePageMeta({ layout: 'example-app'})
+<script>
+// definePageMeta({ layout: false})
+// definePageMeta({ layout: 'example-app'})
 </script>

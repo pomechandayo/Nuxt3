@@ -5,7 +5,6 @@ services:
     build: .
     ports:
       - "3333:3333"
-      - "3000:3000"
       - "24678:24678"
     working_dir: "/src/nuxt-app"
     volumes: 
