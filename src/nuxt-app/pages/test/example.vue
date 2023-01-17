@@ -5,6 +5,9 @@ console.log(useNuxtApp())
 console.log($foo)
 console.log($bar)
 $log()
+// composablesTest.trumpMark = { id: 1, name: '太郎'}
+console.log(composableTest())
+console.log(composableTest.trumpMark)
 </script>
 <template>
   <div>
