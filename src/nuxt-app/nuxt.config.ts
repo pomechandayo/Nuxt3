@@ -4,7 +4,6 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'foo'
     }
   }, 
   css: ['vuetify/lib/styles/main.sass', 'mdi/css/materialdesignicons.min.css'],
