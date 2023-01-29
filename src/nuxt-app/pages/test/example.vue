@@ -1,4 +1,7 @@
-<script setup>
+<script>
+useHead({
+  title: 'ログイン'
+})
 const { $foo, $bar, $log } = useNuxtApp()
 console.log(1)
 console.log(useNuxtApp())
@@ -13,5 +16,6 @@ console.log(composableTest.trumpMark)
   <div>
     test example
     {{ $foo }}
+    <NuxtLink to="/test">To test</NuxtLink>
   </div>
 </template>
