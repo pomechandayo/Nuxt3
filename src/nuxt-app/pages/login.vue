@@ -10,29 +10,32 @@ const toggle = computed(() => {
 })
 const fetch = async () => {
   console.log(1)
-  await useFetch('http://localhost/sanctum/csrf-cookie', { method: 'GET' })
+  const { header } = await useFetch('http://localhost/api/sanctum/csrf-cookie', { method: 'GET' })
   const csrfToken = useCookie('XSRF-TOKEN')
   // console.log(await useFetch('http://localhost/sanctum/csrf-cookie', { method: 'GET' }))
+  console.log(2)
+  console.log(header)
   console.log(csrfToken)
   const { data, error } = await useFetch('http://localhost/api/login', {
     method: 'POST',
     headers: { 'X-XSRF-TOKEN': csrfToken },
     body: {
-      email: 'aaa@aa.aa',
+      email: 'cronin.cortez@example.com',
       password: 'password'
     }
   })
   console.log(data, error)
 }
-const testFetch = async () => {
-  console.log(await useFetch('http://localhost/api/test').data)
+const userFetch = async () => {
+  const { data } = await useFetch('http://localhost/api/users/authorization').data
+  console.log(data)
 }
 </script>
 
 <template>
   <v-container class="d-flex justify-center mt-15">
-    <v-btn @click="fetch">フェッチ</v-btn>
-    <v-btn @click="testFetch">testフェッチ</v-btn>
+    <v-btn @click="fetch">ログイン</v-btn>
+    <v-btn @click="userFetch">ユーザーフェッチ</v-btn>
     <v-card style="height: 390px" class="w-75">
       <v-toolbar>
         <h2 class="ml-10">ログイン</h2>
