@@ -1,20 +1,19 @@
 <script setup>
 const route = useRoute()
-// useHead({
-//   title: `Titleです。 - ${route.meta.title}`,
-//   meta: [
-//     { name: 'description', description: 'descriptionです' }
-//   ]
-// })
+useHead({
+  title: `管理画面 - ${route.meta.title}`,
+  meta: [
+    { name: 'description', description: 'descriptionです' }
+  ]
+})
 </script>
 
 <template>
-  <div style="background-color: grey; text-align: center;">
+  <div>
     <Head>
-      <Title>Titleです。</Title>
-      <Meta name="description" content="descriptionです"/>
+      <Title>タイトルです。</Title>
+      <Meta name="description" content="説明です"/>
     </Head>
-    parent
     <NuxtPage />
   </div>
 </template>
