@@ -13,6 +13,11 @@ export default defineNuxtConfig({
   vite: {
     define: {
       'process.env.DEBUG': false,
+    },
+    server: {
+      hmr: {
+           port: 24600
+      }
     }
   },
   ssr: false
