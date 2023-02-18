@@ -7,10 +7,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const adminTheme = {
     colors: {
       primary: '#ff9800',
-      secondary: '#b0bec5',
-      btn_text_primary: '#fff',
-      btn_text_secondary: '#fff',
-      accent: '#8c9eff',
+      secondary: '#A1887F',
       error: '#b71c1c',
     }
   }
@@ -19,20 +16,24 @@ export default defineNuxtPlugin((nuxtApp) => {
     colors: {
       primary: '#2196F3',
       secondary: '#b0bec5',
-      accent: '#8c9eff',
       error: '#b71c1c',
     }
   }
   const vuetify = createVuetify({
     components,
     directives,
+    variations: {
+      colors: ['primary', 'secondary'],
+      lighten: 1,
+      darken: 2,
+    },
     theme: {
       defaultTheme: 'userTheme',
       themes: {
         userTheme,
         adminTheme
       },
-    },
+    }
   })
   nuxtApp.vueApp.use(vuetify)
 })

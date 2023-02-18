@@ -9,12 +9,6 @@ definePageMeta({ layout: false })
         <div class="bg-primary">
           userTheme primary
         </div>
-        <div class="bg-primary-lighten-1">
-          userTheme primary
-        </div>
-        <div class="bg-primary-darken-2">
-          userTheme primary
-        </div>
       </v-card>
       <v-theme-provider theme="userTheme">
         <div class="bg-secondary">
