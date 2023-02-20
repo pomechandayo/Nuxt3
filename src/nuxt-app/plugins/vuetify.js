@@ -1,37 +1,21 @@
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-import '~/assets/sass/main.scss'
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const adminTheme = {
-    colors: {
-      primary: '#ff9800',
-      secondary: '#A1887F',
-      error: '#b71c1c',
-    }
-  }
-
-  const userTheme = {
+  // テーマを追加
+  const customTheme = {
     colors: {
       primary: '#2196F3',
-      secondary: '#b0bec5',
-      error: '#b71c1c',
+      secondary: '#b0bec5'
     }
   }
   const vuetify = createVuetify({
     components,
-    directives,
-    variations: {
-      colors: ['primary', 'secondary'],
-      lighten: 1,
-      darken: 2,
-    },
+    // テーマを設定
     theme: {
-      defaultTheme: 'userTheme',
+      defaultTheme: 'customTheme',
       themes: {
-        userTheme,
-        adminTheme
+        customTheme
       },
     }
   })

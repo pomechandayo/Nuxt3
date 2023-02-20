@@ -5,31 +5,15 @@ definePageMeta({ layout: false })
 <template>
   <v-app>
     <v-container>
-      <v-card theme="userTheme">
+      <v-card theme="customTheme">
         <div class="bg-primary">
-          userTheme primary
-        </div>
-        <div class="bg-primary-lighten-1">
-          userTheme primary
-        </div>
-        <div class="bg-primary-darken-2">
-          userTheme primary
+          customTheme primary
         </div>
       </v-card>
-      <v-theme-provider theme="userTheme">
+      <v-theme-provider theme="customTheme">
         <div class="bg-secondary">
-          userTheme secondary
+          customTheme secondary
         </div>
-      </v-theme-provider>
-      <v-card theme="adminTheme">
-        <div class="bg-primary">
-          adminTheme primary
-        </div>
-      </v-card>
-      <v-theme-provider theme="adminTheme">
-        <v-card class="bg-secondary">
-          adminTheme secondary
-        </v-card>
       </v-theme-provider>
     </v-container>
   </v-app>
